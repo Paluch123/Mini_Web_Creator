@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% for number in numbers %}
+    {% if current_section.enable_text %}{% include 'text/text.html' %}{% endif %}
+    {% if current_section.enable_side_posts %}{% include 'side_post/side_post.html' %}{% endif %}
+    {% if current_section.enable_posts %}{% include 'posts/posts.html' %}{% endif %}
+    {% if current_section.enable_carousel %}{% include 'carousel/carousel.html' %}{% endif %}
+    {% if current_section.enable_galleries %}{% include 'gallery/main_gallery.html' %}{% endif %}
+    {% if current_section.enable_images %}{% include 'images/images.html' %}{% endif %}
+
+
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,23 @@
+<nav class="{% if navigation_bar %}{{ navigation_bar.style }}{% else %}navbar navbar-expand-sm bg-light navbar-light{% endif %}">
+    <a class="navbar-brand" href="/">
+
+        {% if navigation_bar.logo_image %}<img src="{{ navigation_bar.logo_image.url }}" width="50" height="50" class="d-inline-block align-top" alt="">{% endif %}
+
+        {% if navigation_bar.title %}
+        {{ navigation_bar.title }}
+        {% endif %}
+    </a>
+    <div class="collapse navbar-collapse" id="navbarText">
+
+        <ul class="navbar-nav mr-auto">
+        {% for section in sections %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'main:section' section.slug %}">{{ section.title }}</a>
+        </li>
+        {% endfor %}
+        </ul>
+        <span class="navbar-text">
+        {{ navigation_bar.side_text }}
+        </span>
+    </div>
+    </nav>

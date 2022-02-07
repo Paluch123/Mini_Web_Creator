@@ -1,0 +1,25 @@
+{% block content %}
+{% for gallery_section in gallery_sections %}
+    <div class="row row-cols-1 row-cols-md-3">
+        {% for gallery in galleries %}
+            {% if gallery_section.section == current_section and gallery_section.order == number and gallery.gallery_section == gallery_section %}
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                      <div class="card">
+                        <div class="view overlay {{ gallery_section.style }}">
+                          <img class="card-img-top responsive" src="{{gallery.image.url}}" alt="" width="500" height="250">
+                            <div class="overlay">
+                                <h2>{{ gallery.image_title }}</h2>
+                                <a class="info" href="{% url 'main:gallery_details' current_section.slug gallery.pk %}">See More</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title">{{gallery.title}}</h4>
+                          <p class="card-text">{{gallery.description}}</p>
+                        </div>
+                      </div>
+                    </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endfor %}
+{% endblock content %}

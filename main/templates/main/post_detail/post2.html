@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+<article class="media content-section">
+
+    <div class="media-body">
+        <a style="float: right;" href="/../">
+            <button type="button" class="btn btn-light">Go Back</button>
+        </a>
+        <div class="article-metadata">
+            <small class="text-muted">date</small>
+        </div>
+        <h2 class="article-title">Post with images in details</a></h2>
+        <p class="article-content">{% lorem %}</p>
+    </div>
+</article>
+<div class="container gallery-container">
+    <div class="tz-gallery">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="../media/bloody_hell.jpg">
+                    <img src="../media/bloody_hell.jpg" alt="image" height="250">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="../media/bloody_hell.jpg">
+                    <img src="../media/bloody_hell.jpg" alt="image" height="250">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="../media/bloody_hell.jpg">
+                    <img src="../media/bloody_hell.jpg" alt="image" height="250">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="../media/music-5046876_1920.jpg">
+                    <img src="../media/music-5046876_1920.jpg" alt="image" height="250">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="../media/music-5046876_1920.jpg">
+                    <img src="../media/music-5046876_1920.jpg" alt="image" height="250">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="../media/music-5046876_1920.jpg">
+                    <img src="../media/music-5046876_1920.jpg" alt="image" height="250">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<a href="/../">
+    <button type="button" class="btn btn-light">Go Back</button>
+</a>
+{% endblock content %}

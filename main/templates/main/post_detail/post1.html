@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+<article class="media content-section">
+
+    <div class="media-body">
+        <a style="float: right;" href="/../">
+            <button type="button" class="btn btn-light">Go Back</button>
+        </a>
+        <div class="article-metadata">
+            <small class="text-muted">date</small>
+        </div>
+        <h2 class="article-title">Post with provided website address</a></h2>
+        <p class="article-content">{% lorem %}</p>
+        <a href="https://www.jetbrains.com/help/pycharm/reformat-and-rearrange-code.html#tabs_and_indents">the link</a>
+    </div>
+</article>
+
+<a href="/../"><button type="button" class="btn btn-light">Go Back</button></a>
+{% endblock content %}

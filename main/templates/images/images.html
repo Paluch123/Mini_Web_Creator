@@ -1,0 +1,22 @@
+{% block content %}
+{% for image_section in image_section %}
+    {% if image_section.section == current_section and image_section.order == number %}
+        <div class="container gallery-container">
+            <h1>{{ image_section.title }}</h1>
+            <div class="tz-gallery">
+                <div class="row">
+                    {% for image in images %}
+                    {% if image.image_section == image_section %}
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="{{ image.image.url }}">
+                            <img src="{{ image.image.url }}" alt="image" height = "250">
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+{% endblock content %}

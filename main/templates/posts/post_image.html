@@ -1,0 +1,16 @@
+<div class="container gallery-container">
+    <div class="tz-gallery">
+        <div class="row">
+            {% for image in images %}
+            {% if image.post == current_post %}
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="{{ image.image.url }}">
+                    <img src="{{ image.image.url }}" alt="image" height = "250">
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+

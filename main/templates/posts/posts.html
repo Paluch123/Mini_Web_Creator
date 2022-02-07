@@ -1,0 +1,20 @@
+{% block content %}
+    {% for post_section in post_sections %}
+        {% if post_section.section == current_section and post_section.order == number %}
+            {% for post in posts %}
+                {% if post.post_section == post_section  %}
+                    <article class="media content-section">
+                        <div class="media-body">
+                            <div class="article-metadata">
+                                <small style="float:right" class="text-muted">{{ post.created|date:'d F, Y' }}</small>
+                            </div>
+                            <h2><a class="article-title" href="{% url 'main:details' current_section.slug post.post_slug %}">{{ post.title }}</a></h2>
+                            <p class="article-content">{{ post.summary }}</p>
+                            <a href="{{ post.link }}">{{ post.link }}</a>
+                        </div>
+                    </article>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% block content %}
+    {% for text_section in text_sections %}
+        {% if text_section.section == current_section %}
+            {% for text in text %}
+                {% if text.section == text_section and text.order == number %}
+                    <{{ text.text_choice }} style="text-align: {{text.align}}; font-family: {{ text.font }};">
+                        {{ text.text }}
+                    </{{ text.text_choice }}>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endblock content %}

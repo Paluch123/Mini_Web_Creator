@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+    <article class="media content-section">
+
+        <div class="media-body">
+            <a style="float: right;" href="{% url 'main:section' current_section.slug %}"><button type="button" class="btn btn-light">Go Back</button></a>
+            <div class="article-metadata">
+                <small class="text-muted">{{ current_post.created|date:'d F, Y' }}</small>
+            </div>
+            <h2 class="article-title">{{ current_post.title }}</a></h2>
+            <p class="article-content">{{ current_post.content }}</p>
+            <a href="{{ current_post.link }}">{{ current_post.link }}</a>
+        </div>
+    </article>
+
+{% if current_post.enable_images %}
+{% include 'posts/post_image.html' %}
+{% endif %}
+<a href="{% url 'main:section' current_section.slug %}"><button type="button" class="btn btn-light">Go Back</button></a>
+{% endblock content %}

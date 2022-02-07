@@ -1,0 +1,15 @@
+<!--{% block content %}-->
+<!--    {% for post_section in post_sections %}-->
+<!--        {% if post_section.section == current_section and post_section.order == number %}-->
+<!--            {% for post in posts %}-->
+<!--                {% if post.post_section == post_section  %}-->
+<!--                    <div>-->
+<!--                        <p style="float: right;">{{ post.created }}</p>-->
+<!--                        <h3><a href="{% url 'main:details' current_section.slug post.post_slug %}">{{ post.title }}</a></h3>-->
+<!--                        <p>{{ post.summary }}</p>-->
+<!--                    </div>-->
+<!--                {% endif %}-->
+<!--            {% endfor %}-->
+<!--        {% endif %}-->
+<!--    {% endfor %}-->
+<!--{% endblock content %}-->

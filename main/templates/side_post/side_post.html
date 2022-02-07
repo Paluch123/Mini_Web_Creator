@@ -1,0 +1,40 @@
+{% block content %}
+    {% for side_post_section in side_post_sections %}
+        {% if side_post_section.section == current_section and side_post_section.order == number %}
+            {% for post in side_posts %}
+                {% if post.post_section == side_post_section and post.side == 'LEFT' %}
+                    <hr class="featurette-divider">
+                    <div class="row featurette">
+                      <div class="col-md-7">
+                        <h2 class="featurette-heading">{{ post.heading }}<span class="text-muted">{{ post.heading2 }}</span></h2>
+                        <p class="lead">{{ post.description }}</p>
+                      </div>
+                      <div class="col-md-5 {{ side_post_section.style }}">
+                        <img src="{{post.image.url}}" class="rounded float-right" alt="" width="500" height="300">
+                        <div style="margin:0px -15px" class="overlay">
+                          <h2>{{post.image_title}}</h2>
+                          <a style="margin:70px" class="info" href="{{post.link}}">link here</a>
+                        </div>
+                      </div>
+                    </div>
+                {% elif post.post_section == side_post_section and post.side == 'RIGHT' %}
+                    <hr class="featurette-divider">
+                    <div class="row featurette">
+                      <div class="col-md-7 order-md-2">
+                        <h2 class="featurette-heading">{{ post.heading }}<span class="text-muted">{{ post.heading2 }}</span></h2>
+                        <p class="lead">{{ post.description }}</p>
+                      </div>
+                      <div class="col-md-5 order-md-1 {{ side_post_section.style }}">
+                        <img src="{{post.image.url}}" class="rounded float-left" alt="" width="500" height="300">
+                        <div style="margin:0px 0px 0px 15px" class="overlay">
+                          <h2>{{post.image_title}}</h2>
+                          <a style="margin:70px" class="info" href="{{post.link}}">link here</a>
+                        </div>
+                      </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <br>
+        {% endif %}
+    {% endfor %}
+{% endblock content %}
