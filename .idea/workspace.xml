@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9db7be7-0805-4e58-88c4-94c8128dca89" name="Default Changelist" comment="" />
+    <list default="true" id="d9db7be7-0805-4e58-88c4-94c8128dca89" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/gallery_detail/gallery1.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/gallery_detail/gallery1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/gallery_detail/gallery2.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/gallery_detail/gallery2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/gallery_detail/gallery3.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/gallery_detail/gallery3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/instruction.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/instruction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/post_detail/post2.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/post_detail/post2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/post_detail/post3.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/post_detail/post3.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,18 +38,19 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/inst_images" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Mateusz\django projects\mwc_final" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Mateusz\django projects\mwc_final\back_up" />
       <recent name="C:\Users\Mateusz\django projects\mwc_final\main" />
       <recent name="C:\Users\Mateusz\django projects\mwc_final\main\templates\main" />
       <recent name="C:\Users\Mateusz\django projects\mwc_final\static\main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mateusz\django projects\mwc_final\media\inst_images" />
+      <recent name="C:\Users\Mateusz\django projects\mwc_final" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -58,14 +67,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="932" y="160" key="FileChooserDialogImpl" timestamp="1643208991216">
+    <state x="932" y="160" key="FileChooserDialogImpl" timestamp="1644318440510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="932" y="160" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1643208991216" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1644234721417">
+    <state x="932" y="160" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1644318440510" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1644318433352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1644234721417" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1644318433352" />
     <state x="221" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1641844476966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
