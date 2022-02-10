@@ -171,6 +171,7 @@ class Carousel(models.Model):
     title = models.CharField(max_length=50)
     section = models.OneToOneField(Section, on_delete=models.CASCADE)
     head_image = models.ImageField(blank=True, upload_to='carousel_images')
+    centered_header = models.CharField(max_length=255, blank=True)
     header = models.CharField(max_length=50, blank=True)
     description = models.CharField(max_length=150, blank=True)
 
@@ -182,6 +183,7 @@ class CarouselImage(models.Model):
     """add on another images for your carousel, set headers etc."""
     carousel = models.ForeignKey(Carousel, on_delete=models.CASCADE)
     image = models.ImageField(blank=True, upload_to='carousel_images')
+    centered_header = models.CharField(max_length=255, blank=True)
     header = models.CharField(max_length=50, blank=True)
     description = models.CharField(max_length=150, blank=True)
 
