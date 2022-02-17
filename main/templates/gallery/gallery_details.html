@@ -15,8 +15,7 @@
     <div class="carousel-inner" role="listbox">
       {% for image in images %}
       <div align="center" class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
-        <img class="d-block h-100" src="{{image.image.url}}"
-          alt="First slide">
+        <img class="d-block gallery-image" src="{{image.image.url}}"alt="First slide">
       </div>
       {% endfor %}
       <!--/First slide-->
