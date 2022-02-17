@@ -28,7 +28,7 @@
                 {% if image.carousel == carousel %}
                 <div class="carousel-item">
                     <img src="{{ image.image.url }}" class="d-block w-100" alt="{{ image.header }}">
-                    <div class="centered"><h1 style="{{carousel_text_style}}">{{ carousel.centered_header }}</h1></div>
+                    <div class="centered"><h1 style="{{carousel_text_style}}">{{ image.centered_header }}</h1></div>
                     <div class="carousel-caption d-none d-md-block">
                         <h5 style="{{carousel_text_style}}">{{ image.header }}</h5>
                         <p style="{{carousel_text_style}}">{{ image.description }}</p>
