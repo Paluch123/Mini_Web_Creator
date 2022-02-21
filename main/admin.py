@@ -114,6 +114,8 @@ class PostSectionAdmin(admin.StackedInline):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
+    list_display = ("title", "post_section", "created")
+
     inlines = [PostSectionAdmin]
 
     class Meta:
@@ -125,6 +127,8 @@ admin.site.register(SidePost)
 
 
 class SidePostSectionAdmin(admin.StackedInline):
+    list_display = ("title", "post_section", "created")
+
     model = SidePost
     extra = 1
 
