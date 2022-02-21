@@ -12,6 +12,7 @@ class Section(models.Model):
     enable_posts = models.BooleanField(default=True)
     enable_images = models.BooleanField(default=True)
     enable_carousel = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     # enable_contact_form = models.BooleanField(default=True)
 
@@ -25,6 +26,7 @@ class TextSection(models.Model):
 
     title = models.CharField(max_length=100, default='not created yet or title not changed')
     section = models.OneToOneField(Section, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.section.title + ' ' + self.title
@@ -92,6 +94,7 @@ class SidePostSection(models.Model):
     title = models.CharField(max_length=100, default='not named yet')
     section = models.OneToOneField(Section, on_delete=models.CASCADE)
     style = models.CharField(max_length=100, default='hover effect #1', choices=StyleChoices)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.section.title + ' ' + self.title
@@ -112,7 +115,7 @@ class SidePost(models.Model):
     image = models.FileField(upload_to='side_post_images/')
     link = models.CharField(blank=True, max_length=100)
     side = models.CharField(max_length=100, default='LEFT', choices=SideChoices)
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.heading
@@ -130,6 +133,7 @@ class PostSection(models.Model):
     order = models.IntegerField(default=0)
     title = models.CharField(max_length=100, default='not created yet or title not changed')
     section = models.OneToOneField(Section, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.section.title
@@ -143,7 +147,7 @@ class Post(models.Model):
     summary = models.CharField(max_length=300)
     content = models.TextField()
     published = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
     enable_images = models.BooleanField(default=False)
     link = models.URLField(blank=True, max_length=255)
 
@@ -160,6 +164,7 @@ class Post(models.Model):
 class PostImage(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='post\'s_images', blank=True)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.post.title
@@ -174,6 +179,7 @@ class Carousel(models.Model):
     centered_header = models.CharField(max_length=255, blank=True)
     header = models.CharField(max_length=50, blank=True)
     description = models.CharField(max_length=150, blank=True)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.section.title + ' ' + self.title
@@ -186,6 +192,7 @@ class CarouselImage(models.Model):
     centered_header = models.CharField(max_length=255, blank=True)
     header = models.CharField(max_length=50, blank=True)
     description = models.CharField(max_length=150, blank=True)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.header + ' in ' + str(self.carousel)
@@ -203,6 +210,7 @@ class GallerySection(models.Model):
     title = models.CharField(max_length=100, default='not named yet')
     section = models.ForeignKey(Section, on_delete=models.CASCADE)
     style = models.CharField(max_length=100, default='hovereffect', choices=StyleChoices)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.section.title + ' ' + self.title
@@ -215,6 +223,7 @@ class Gallery(models.Model):
     description = models.TextField()
     image = models.FileField(blank=True, upload_to='gallery_images/')
     image_title = models.CharField(max_length=50, default='some title')
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -224,6 +233,7 @@ class GalleryImage(models.Model):
     """choose gellery and upload image to it"""
     section = models.ForeignKey(Gallery, default=None, on_delete=models.CASCADE)
     image = models.FileField(upload_to='gallery_images/')
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.section.title
@@ -289,6 +299,7 @@ class ImageSection(models.Model):
     order = models.IntegerField(default=0)
     title = models.CharField(max_length=100, default='not created yet or title not changed')
     section = models.OneToOneField(Section, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.section.title
@@ -298,3 +309,4 @@ class Image(models.Model):
     """choose what and which section would u like to have your images"""
     image = models.ImageField(upload_to='images_images/', blank=True)
     image_section = models.ForeignKey(ImageSection, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True, blank=True)

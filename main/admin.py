@@ -8,7 +8,6 @@ admin.site.register(Text)
 admin.site.register(TextSection)
 
 
-
 @admin.register(NavigationBar)
 class NavigationBarAdmin(admin.ModelAdmin):
     class Meta:
@@ -78,9 +77,11 @@ class GalleryImageAdmin(admin.StackedInline):
 
 @admin.register(Gallery)
 class GalleryAdmin(admin.ModelAdmin):
+    list_display = ("title", "gallery_section", "created")
     inlines = [GalleryImageAdmin]
 
     class Meta:
+        ordering = "gallery_section"
         model = Gallery
 
 
