@@ -7,7 +7,7 @@
     {% if current_section.enable_carousel %}{% include 'carousel/carousel.html' %}{% endif %}
     {% if current_section.enable_galleries %}{% include 'gallery/main_gallery.html' %}{% endif %}
     {% if current_section.enable_images %}{% include 'images/images.html' %}{% endif %}
-
+    {% if current_section.enable_info_tab %}{% include 'info_tab/info_tab.html' %}{% endif %}
 
 {% endfor %}
 {% endblock content %}

@@ -1,12 +1,12 @@
 from django.contrib import admin
 from .models import Section, Text, TextSection, SidePostSection, SidePost, PostSection, Post, PostImage, CarouselImage, \
-    Carousel, GallerySection, Gallery, GalleryImage, NavigationBar, BackgroundImage, Instruction, ImageSection, Image
+    Carousel, GallerySection, Gallery, GalleryImage, NavigationBar, BackgroundImage, Instruction, ImageSection, Image, \
+    InfoTab
 
 # Register your models here.
 admin.site.register(Section)
 admin.site.register(Text)
 admin.site.register(TextSection)
-
 
 
 @admin.register(NavigationBar)
@@ -140,3 +140,9 @@ class PostAdmin(admin.ModelAdmin):
 
     class Meta:
         model = SidePost
+
+
+@admin.register(InfoTab)
+class InfoTabAdmin(admin.ModelAdmin):
+    list_display = ("title", "section", "created")
+    model = InfoTab

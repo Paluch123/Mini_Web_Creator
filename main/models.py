@@ -12,6 +12,7 @@ class Section(models.Model):
     enable_posts = models.BooleanField(default=True)
     enable_images = models.BooleanField(default=True)
     enable_carousel = models.BooleanField(default=True)
+    enable_info_tab = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, blank=True)
 
     # enable_contact_form = models.BooleanField(default=True)
@@ -310,3 +311,23 @@ class Image(models.Model):
     image = models.ImageField(upload_to='images_images/', blank=True)
     image_section = models.ForeignKey(ImageSection, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True, blank=True)
+
+
+class InfoTab(models.Model):
+    """set section and order also image, heading, content and link to every out of 3 tab"""
+    title = models.CharField(max_length=25, default='info tab')
+    section = models.OneToOneField(Section, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True)
+    order = models.IntegerField(default=0)
+    img1 = models.ImageField(upload_to="info_tab_images/")
+    heading1 = models.CharField(max_length=50)
+    content1 = models.TextField(max_length=255)
+    link1 = models.URLField()
+    img2 = models.ImageField(upload_to="info_tab_images/")
+    heading2 = models.CharField(max_length=50)
+    content2 = models.TextField(max_length=255)
+    link2 = models.URLField()
+    img3 = models.ImageField(upload_to="info_tab_images/")
+    heading3 = models.CharField(max_length=50)
+    content3 = models.TextField(max_length=255)
+    link3 = models.URLField()

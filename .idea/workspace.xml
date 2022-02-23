@@ -4,7 +4,11 @@
     <list default="true" id="d9db7be7-0805-4e58-88c4-94c8128dca89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/instruction.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/instruction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/section.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,19 +38,20 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bicycle_store_example" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/templates" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mateusz\django projects\mwc_final\main\templates" />
+      <recent name="C:\Users\Mateusz\django projects\mwc_final\media\inst_images" />
+      <recent name="C:\Users\Mateusz\django projects\mwc_final" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Mateusz\django projects\mwc_final\back_up" />
       <recent name="C:\Users\Mateusz\django projects\mwc_final\main" />
       <recent name="C:\Users\Mateusz\django projects\mwc_final\main\templates\main" />
       <recent name="C:\Users\Mateusz\django projects\mwc_final\static\main" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Mateusz\django projects\mwc_final\media\inst_images" />
-      <recent name="C:\Users\Mateusz\django projects\mwc_final" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -63,10 +68,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="932" y="160" key="FileChooserDialogImpl" timestamp="1645533152050">
+    <state x="932" y="160" key="FileChooserDialogImpl" timestamp="1645540928707">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="932" y="160" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1645533152050" />
+    <state x="932" y="160" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1645540928707" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1645102218415">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
