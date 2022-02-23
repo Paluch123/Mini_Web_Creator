@@ -1,0 +1,28 @@
+{% block content %}
+{% for info_tab in info_tabs %}
+    {% if info_tab.section == current_section and info_tab.order == number %}
+    <div class="container marketing">
+        <div class="row">
+            <div align="center" class="col-lg-4">
+                <img height="225px" width="300" src="{{ info_tab.img1.url }}" class="rounded-circle" alt="Cinque Terre">
+                <h2>{{ info_tab.heading1 }}</h2>
+                <p align="left">{{ info_tab.content1 }}</p>
+                <p><a class="btn btn-secondary" href="{{ info_tab.link1 }}" role="button">View details</a></p>
+            </div>
+            <div align="center" class="col-lg-4">
+                <img height="225px" width="300" src="{{ info_tab.img2.url }}" class="rounded-circle" alt="Cinque Terre">
+                <h2>{{ info_tab.heading2 }}</h2>
+                <p align="left">{{ info_tab.content2 }}</p>
+                <p><a class="btn btn-secondary" href="{{ info_tab.link2 }}" role="button">View details</a></p>
+            </div>
+            <div align="center" class="col-lg-4">
+                <img height="225px" width="300" src="{{ info_tab.img3.url }}" class="rounded-circle" alt="Cinque Terre">
+                <h2>{{ info_tab.heading3 }}</h2>
+                <p align="left">{{ info_tab.content3 }}</p>
+                <p><a class="btn btn-secondary" href="{{ info_tab.link3 }}" role="button">View details</a></p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}
+{% endblock content %}

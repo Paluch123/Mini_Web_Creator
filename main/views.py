@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, Http404
 from .models import Section, TextSection, Text, SidePostSection, SidePost, \
     PostSection, Post, PostImage, Carousel, CarouselImage, GallerySection, Gallery, GalleryImage, NavigationBar, \
-    BackgroundImage, Instruction, ImageSection, Image
+    BackgroundImage, Instruction, ImageSection, Image, InfoTab
 
 numbers = []
 for _ in range(25):
@@ -62,6 +62,9 @@ def section(request, slug):
     # --------------images
     image_section = ImageSection.objects.all()
     images = Image.objects.all()
+
+    # -----------------info tab
+    info_tab = InfoTab.objects.all()
     context = {
         'sections': sections,
         'text_sections': text_sections,
@@ -81,6 +84,7 @@ def section(request, slug):
         'background_image': background_image,
         'image_section': image_section,
         'images': images,
+        'info_tabs': info_tab,
 
     }
     return render(request, 'main/section.html', context)
