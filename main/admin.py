@@ -5,8 +5,12 @@ from .models import Section, Text, TextSection, SidePostSection, SidePost, PostS
 
 # Register your models here.
 admin.site.register(Section)
-admin.site.register(Text)
 admin.site.register(TextSection)
+
+
+@admin.register(Text)
+class TextAdmin(admin.ModelAdmin):
+    list_display = ("your_summary", "section", "created")
 
 
 @admin.register(NavigationBar)

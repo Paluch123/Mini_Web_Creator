@@ -11,9 +11,11 @@
 
         <ul class="navbar-nav mr-auto">
         {% for section in sections %}
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'main:section' section.slug %}">{{ section.title }}</a>
-        </li>
+            {% if section.on_site %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'main:section' section.slug %}">{{ section.title }}</a>
+            </li>
+            {% endif %}
         {% endfor %}
         </ul>
         <span class="navbar-text">
