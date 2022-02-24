@@ -128,7 +128,7 @@ class PostAdmin(admin.ModelAdmin):
 
 
 # admin.site.register(SidePostSection)
-admin.site.register(SidePost)
+# admin.site.register(SidePost)
 
 
 class SidePostSectionAdmin(admin.StackedInline):
@@ -144,6 +144,11 @@ class PostAdmin(admin.ModelAdmin):
 
     class Meta:
         model = SidePost
+
+
+@admin.register(SidePost)
+class SidePostAdmin(admin.ModelAdmin):
+    list_display = ("heading", "post_section", "created")
 
 
 @admin.register(InfoTab)
