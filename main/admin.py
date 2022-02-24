@@ -5,8 +5,12 @@ from .models import Section, Text, TextSection, SidePostSection, SidePost, PostS
 
 # Register your models here.
 admin.site.register(Section)
-admin.site.register(Text)
 admin.site.register(TextSection)
+
+
+@admin.register(Text)
+class TextAdmin(admin.ModelAdmin):
+    list_display = ("your_summary", "section", "created")
 
 
 @admin.register(NavigationBar)
@@ -124,7 +128,7 @@ class PostAdmin(admin.ModelAdmin):
 
 
 # admin.site.register(SidePostSection)
-admin.site.register(SidePost)
+# admin.site.register(SidePost)
 
 
 class SidePostSectionAdmin(admin.StackedInline):
@@ -140,6 +144,11 @@ class PostAdmin(admin.ModelAdmin):
 
     class Meta:
         model = SidePost
+
+
+@admin.register(SidePost)
+class SidePostAdmin(admin.ModelAdmin):
+    list_display = ("heading", "post_section", "created")
 
 
 @admin.register(InfoTab)

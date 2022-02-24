@@ -14,6 +14,7 @@ class Section(models.Model):
     enable_carousel = models.BooleanField(default=True)
     enable_info_tab = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, blank=True)
+    on_site = models.BooleanField(default=True)
 
     # enable_contact_form = models.BooleanField(default=True)
 
@@ -64,15 +65,15 @@ class Text(models.Model):
 
     )
     section = models.ForeignKey(TextSection, on_delete=models.CASCADE)
-    text = models.TextField(max_length=255, blank=True)
+    text = models.TextField(max_length=1024, blank=True)
     align = models.CharField(max_length=100, default='left', choices=AlignChoices)
     text_choice = models.CharField(max_length=100, default='p', choices=TextChoices)
     font = models.CharField(max_length=100, default='default', choices=FontChoices, blank=True)
-    your_summary = models.CharField(blank=True, max_length=50)
+    your_summary = models.CharField(default='not defined', max_length=50)
     created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
-        return self.your_summary
+        return self.your_summary + self.section.title
 
     class Meta:
         ordering = ['-created']
@@ -88,13 +89,14 @@ class SidePostSection(models.Model):
         ('hovereffect', 'hover effect #1'),
         ('hovereffect2', 'hover effect #2'),
         ('hovereffect3', 'hover effect #3'),
+        ('', 'None'),
 
     )
 
     order = models.IntegerField(default=0)
     title = models.CharField(max_length=100, default='not named yet')
     section = models.OneToOneField(Section, on_delete=models.CASCADE)
-    style = models.CharField(max_length=100, default='hover effect #1', choices=StyleChoices)
+    style = models.CharField(max_length=100, default='hover effect #1', choices=StyleChoices, blank=True)
     created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
@@ -111,9 +113,10 @@ class SidePost(models.Model):
     post_section = models.ForeignKey(SidePostSection, on_delete=models.CASCADE)
     heading = models.CharField(max_length=25)
     heading2 = models.CharField(max_length=25, blank=True)
-    description = models.TextField()
+    description = models.TextField(max_length=1024)
     image_title = models.CharField(blank=True, max_length=25)
     image = models.FileField(upload_to='side_post_images/')
+    enable_link = models.BooleanField(default=True)
     link = models.CharField(blank=True, max_length=100)
     side = models.CharField(max_length=100, default='LEFT', choices=SideChoices)
     created = models.DateTimeField(auto_now_add=True, blank=True)

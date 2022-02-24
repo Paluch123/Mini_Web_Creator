@@ -10,11 +10,13 @@
                         <p class="lead">{{ post.description }}</p>
                       </div>
                       <div class="col-md-5 {{ side_post_section.style }}">
-                        <img src="{{post.image.url}}" class="rounded float-right" alt="" width="500" height="300">
+                        <img src="{{post.image.url}}" class="rounded float-right" alt="" width="470" height="300">
+                        {% if post.enable_link %}
                         <div style="margin:0px -15px" class="overlay">
                           <h2>{{post.image_title}}</h2>
                           <a style="margin:70px" class="info" href="{{post.link}}">link here</a>
                         </div>
+                        {% endif %}
                       </div>
                     </div>
                 {% elif post.post_section == side_post_section and post.side == 'RIGHT' %}
@@ -25,11 +27,13 @@
                         <p class="lead">{{ post.description }}</p>
                       </div>
                       <div class="col-md-5 order-md-1 {{ side_post_section.style }}">
-                        <img src="{{post.image.url}}" class="rounded float-left" alt="" width="500" height="300">
+                        <img src="{{post.image.url}}" class="rounded float-left" alt="" width="470" height="300">
+                        {% if post.enable_link %}
                         <div style="margin:0px 0px 0px 15px" class="overlay">
                           <h2>{{post.image_title}}</h2>
                           <a style="margin:70px" class="info" href="{{post.link}}">link here</a>
                         </div>
+                        {% endif %}
                       </div>
                     </div>
                 {% endif %}
